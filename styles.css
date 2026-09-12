@@ -1,0 +1,181 @@
+:root {
+  --bg: #14110e;
+  --paper: #1c1814;
+  --ink: #efe6d6;
+  --muted: #b5a894;
+  --line: #3a3228;
+  --accent: #c4a36a;
+  --accent-2: #6f8f6a;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background:
+    radial-gradient(1200px 500px at 10% -10%, #2a241c 0%, transparent 55%),
+    var(--bg);
+  color: var(--ink);
+  font-family: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+  line-height: 1.6;
+}
+
+.page {
+  width: min(760px, calc(100% - 40px));
+  margin: 0 auto;
+  padding: 28px 0 56px;
+}
+
+.site-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 16px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid var(--line);
+}
+
+.mark {
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.86rem;
+}
+
+nav a {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+nav a[aria-current="page"],
+nav a:hover {
+  color: var(--ink);
+}
+
+.hero {
+  padding: 56px 0 28px;
+}
+
+.eyebrow {
+  margin: 0 0 10px;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+}
+
+h1 {
+  margin: 0 0 16px;
+  font-size: clamp(2.2rem, 6vw, 3.4rem);
+  line-height: 1.1;
+  font-weight: 600;
+}
+
+.lede {
+  margin: 0 0 14px;
+  font-size: 1.2rem;
+  color: var(--ink);
+}
+
+.sub,
+.muted,
+footer {
+  color: var(--muted);
+}
+
+.sub a,
+.prose a,
+.card {
+  color: var(--accent);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 12px;
+  margin-top: 12px;
+}
+
+.card {
+  display: block;
+  padding: 18px 16px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  text-decoration: none;
+  color: var(--ink);
+}
+
+.card h2 {
+  margin: 0 0 8px;
+  font-size: 1.15rem;
+}
+
+.card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.98rem;
+}
+
+.prose {
+  padding-top: 40px;
+}
+
+.prose h2 {
+  margin-top: 36px;
+  font-size: 1.25rem;
+}
+
+.note {
+  padding: 12px 14px;
+  border-left: 3px solid var(--accent-2);
+  background: #1a2018;
+  color: #d5dcc8;
+}
+
+.links,
+.list {
+  padding-left: 18px;
+}
+
+.list li {
+  margin: 12px 0;
+}
+
+.list .muted {
+  display: block;
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+footer {
+  margin-top: 56px;
+  padding-top: 16px;
+  border-top: 1px solid var(--line);
+  font-family: ui-sans-serif, system-ui, sans-serif;
+  font-size: 0.8rem;
+}
+
+@media (max-width: 560px) {
+  .site-header {
+    flex-direction: column;
+  }
+}
