@@ -73,8 +73,8 @@ nav a:hover {
 }
 
 .portrait {
-  width: 168px;
-  height: 210px;
+  width: 176px;
+  height: 176px;
   object-fit: cover;
   object-position: top;
   border: 1px solid var(--line);
@@ -195,5 +195,5 @@ footer {
 @media (max-width: 640px) {
   .site-header { flex-direction: column; }
   .hero-split { grid-template-columns: 1fr; }
-  .portrait { width: 132px; height: 165px; }
+  .portrait { width: 128px; height: 128px; }
 }
